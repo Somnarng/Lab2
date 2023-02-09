@@ -20,8 +20,7 @@ public class NPCLookAt : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * speed);
         }
         else{
-            var defRotation = defRot;
-            transform.rotation = Quaternion.Slerp(transform.rotation, defRotation, Time.deltaTime * speed);
+            Invoke("resetPos", 1f);
         }
     }
 
@@ -29,4 +28,9 @@ public class NPCLookAt : MonoBehaviour
     {
         DialogueIN = !DialogueIN;
     }
+    public void resetPos()
+    {
+       var defRotation = defRot;
+        transform.rotation = Quaternion.Slerp(transform.rotation, defRotation, Time.deltaTime * speed);
     }
+}

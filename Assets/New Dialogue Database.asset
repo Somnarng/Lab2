@@ -1088,7 +1088,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["BraveryEnd"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1143,7 +1143,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["EscapeEnd"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1341,21 +1341,26 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[em2]IT''S TIME TO WAKE UP.[/em2]'
+        value: It's time to [em2]wake up...[/em2]
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 'Delay({{end}});
 
-          AnimatorPlay(Wakeup, FadeInCanvas);
+          Continue();
 
-          Continue();'
+          AnimatorPlay(Wakeup,
+          FadeInCanvas);'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
         value: 0da5cac2-fc29-4326-8565-5e755508670a
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -1371,13 +1376,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 117
-        y: 466
+        x: 120.4091
+        y: 467.13635
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 140.13298}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 105.77425}
+    canvasZoom: 0.7600002
   - id: 8
     fields:
     - title: Title
@@ -1482,7 +1487,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 18.507462
+        y: 20
         width: 160
         height: 30
     - id: 1
@@ -1536,7 +1541,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 208.50748
+        x: 210
         y: 70
         width: 160
         height: 30
@@ -2204,7 +2209,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: To be more specific, the infirmary room.
+        value: To be more specific, an infirmary room in this small hospital that
+          I now call home.
         type: 0
         typeString: 
       - title: Sequence
@@ -2259,7 +2265,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's been quite some time since this room has seen some use.
+        value: It's been quite some time since these rooms have seen some use.
         type: 0
         typeString: 
       - title: Sequence
@@ -2345,7 +2351,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 768.50745
+        y: 770
         width: 160
         height: 30
     - id: 18
@@ -3912,8 +3918,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 214.47762
-        y: 1678.9552
+        x: 210
+        y: 1670
         width: 160
         height: 30
     - id: 53
@@ -3967,8 +3973,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1728.9552
+        x: 210
+        y: 1720
         width: 160
         height: 30
     - id: 54
@@ -4023,8 +4029,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1778.9552
+        x: 210
+        y: 1770
         width: 160
         height: 30
     - id: 55
@@ -4081,8 +4087,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1827.6393
+        x: 210
+        y: 1820
         width: 160
         height: 30
     - id: 56
@@ -4136,8 +4142,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1876.3234
+        x: 210
+        y: 1870
         width: 160
         height: 30
     - id: 57
@@ -4192,8 +4198,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1926.3234
+        x: 210
+        y: 1920
         width: 160
         height: 30
     - id: 58
@@ -4247,8 +4253,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 1975.0077
+        x: 210
+        y: 1970
         width: 160
         height: 30
     - id: 59
@@ -4302,8 +4308,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210.3535
-        y: 2026.3234
+        x: 210
+        y: 2020
         width: 160
         height: 30
     - id: 60
@@ -4357,8 +4363,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 2075.0076
+        x: 210
+        y: 2070
         width: 160
         height: 30
     - id: 61
@@ -4412,13 +4418,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 2125.0076
+        x: 210
+        y: 2120
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1832.9438}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 244.67517}
+    canvasZoom: 0.73000026
   - id: 9
     fields:
     - title: Title
