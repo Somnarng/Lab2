@@ -1088,7 +1088,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["BraveryEnd"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1143,7 +1143,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["EscapeEnd"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1315,7 +1315,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 117
-        y: 416
+        y: 414.6842
         width: 160
         height: 30
     - id: 9
@@ -1341,19 +1341,82 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[em2]IT''S TIME TO WAKE UP.[/em2]'
+        value: It's time to [em2]wake up...[/em2]\.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 'Delay({{end}});
 
-          AnimatorPlay(Wakeup, FadeInCanvas);
-
-          Continue();'
+          SetDialoguePanel(false);'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
         value: 0da5cac2-fc29-4326-8565-5e755508670a
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 9
+        destinationConversationID: 7
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 120.4091
+        y: 467.13635
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Continue();
+
+          AnimatorPlay(Wakeup, FadeInCanvas);'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 2e3736ed-1635-4ab9-91e0-2cccf326bf5d
         type: 0
         typeString: 
       conversationID: 7
@@ -1371,13 +1434,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 117
-        y: 466
+        x: 120.4091
+        y: 517.13635
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 140.13298}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 105.77425}
+    canvasZoom: 0.7600002
   - id: 8
     fields:
     - title: Title
@@ -1482,7 +1545,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 18.507462
+        y: 20
         width: 160
         height: 30
     - id: 1
@@ -1536,7 +1599,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 208.50748
+        x: 210
         y: 70
         width: 160
         height: 30
@@ -1567,9 +1630,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -1628,7 +1689,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -1968,9 +2031,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -2031,7 +2092,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -2055,8 +2118,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 520
+        x: 45.886078
+        y: 517.4683
         width: 160
         height: 30
     - id: 13
@@ -2086,7 +2149,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -2204,7 +2269,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: To be more specific, the infirmary room.
+        value: To be more specific, an infirmary room in this small former hospital
+          that I call my home.
         type: 0
         typeString: 
       - title: Sequence
@@ -2259,13 +2325,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's been quite some time since this room has seen some use.
+        value: It's been quite some time since these rooms have seen some use.
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -2345,7 +2409,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 768.50745
+        y: 770
         width: 160
         height: 30
     - id: 18
@@ -2537,14 +2601,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Any later and this storm would've meant you likely wouldn't have been
-          found in time.
+        value: Any later and you likely wouldn't have been found in time.
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -2555,12 +2616,6 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 21
-        destinationConversationID: 8
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
       - originConversationID: 8
         originDialogueID: 21
         destinationConversationID: 8
@@ -2576,61 +2631,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 210
         y: 920
-        width: 160
-        height: 30
-    - id: 22
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Whats this about a storm?
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 22
-        destinationConversationID: 8
-        destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 75
-        y: 970
         width: 160
         height: 30
     - id: 23
@@ -2660,7 +2660,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -2684,7 +2686,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 970
         width: 160
         height: 30
@@ -2739,7 +2741,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1320
         width: 160
         height: 30
@@ -2794,7 +2796,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1020
         width: 160
         height: 30
@@ -2850,7 +2852,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1070
         width: 160
         height: 30
@@ -2906,7 +2908,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1120
         width: 160
         height: 30
@@ -2961,7 +2963,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1170
         width: 160
         height: 30
@@ -3017,8 +3019,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1070
+        x: 210
+        y: 1370
         width: 160
         height: 30
     - id: 30
@@ -3048,9 +3050,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -3074,8 +3074,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1120
+        x: 210
+        y: 1420
         width: 160
         height: 30
     - id: 31
@@ -3217,7 +3217,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -3241,8 +3243,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1170
+        x: 210
+        y: 1470
         width: 160
         height: 30
     - id: 39
@@ -3296,8 +3298,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1220
+        x: 210
+        y: 1520
         width: 160
         height: 30
     - id: 41
@@ -3327,11 +3329,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorTrigger(Talk);
-
-          Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: AnimatorTrigger(Talk);
         type: 0
         typeString: 
       conversationID: 8
@@ -3355,8 +3353,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1270
+        x: 210
+        y: 1570
         width: 160
         height: 30
     - id: 43
@@ -3386,7 +3384,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -3410,8 +3410,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1320
+        x: 210
+        y: 1620
         width: 160
         height: 30
     - id: 44
@@ -3466,7 +3466,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1370
+        y: 1670
         width: 160
         height: 30
     - id: 45
@@ -3521,7 +3521,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1420
+        y: 1720
         width: 160
         height: 30
     - id: 46
@@ -3577,7 +3577,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1470
+        y: 1770
         width: 160
         height: 30
     - id: 47
@@ -3603,8 +3603,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: We can't contact them to let them know either, standard communications
-          don't reach that far.
+        value: We can't contact them to let them know either, the storm means our
+          signals can't reach that far.
         type: 0
         typeString: 
       - title: Sequence
@@ -3633,7 +3633,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1520
+        y: 1820
         width: 160
         height: 30
     - id: 48
@@ -3663,9 +3663,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -3689,7 +3687,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1220
         width: 160
         height: 30
@@ -3720,7 +3718,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -3744,7 +3744,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 210
         y: 1270
         width: 160
         height: 30
@@ -3800,7 +3800,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1570
+        y: 1870
         width: 160
         height: 30
     - id: 51
@@ -3831,9 +3831,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -3858,7 +3856,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 1620
+        y: 1920
         width: 160
         height: 30
     - id: 52
@@ -3888,7 +3886,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -3912,8 +3912,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 214.47762
-        y: 1678.9552
+        x: 210
+        y: 1970
         width: 160
         height: 30
     - id: 53
@@ -3967,8 +3967,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1728.9552
+        x: 210
+        y: 2020
         width: 160
         height: 30
     - id: 54
@@ -3994,7 +3994,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You might be able to contact someone in town if you could get it back
+        value: We might be able to contact someone in town if we could get it back
           up and running...
         type: 0
         typeString: 
@@ -4023,8 +4023,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1778.9552
+        x: 210
+        y: 2070
         width: 160
         height: 30
     - id: 55
@@ -4055,9 +4055,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: 
         type: 0
         typeString: 
       conversationID: 8
@@ -4081,8 +4079,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1827.6393
+        x: 210
+        y: 2120
         width: 160
         height: 30
     - id: 56
@@ -4112,7 +4110,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          AnimatorTrigger(Idle);'
         type: 0
         typeString: 
       conversationID: 8
@@ -4136,8 +4136,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1876.3234
+        x: 210
+        y: 2170
         width: 160
         height: 30
     - id: 57
@@ -4192,8 +4192,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.98506
-        y: 1926.3234
+        x: 210
+        y: 2220
         width: 160
         height: 30
     - id: 58
@@ -4247,8 +4247,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 1975.0077
+        x: 210
+        y: 2270
         width: 160
         height: 30
     - id: 59
@@ -4302,8 +4302,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210.3535
-        y: 2026.3234
+        x: 210
+        y: 2320
         width: 160
         height: 30
     - id: 60
@@ -4333,7 +4333,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorBool(QuestStart, true, QuestCanvas);
         type: 0
         typeString: 
       conversationID: 8
@@ -4357,8 +4357,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 2075.0076
+        x: 210
+        y: 2370
         width: 160
         height: 30
     - id: 61
@@ -4412,13 +4412,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.6693
-        y: 2125.0076
+        x: 210
+        y: 2420
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1832.9438}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 1935.4434}
+    canvasZoom: 0.7900001
   - id: 9
     fields:
     - title: Title
@@ -4516,7 +4516,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 210
         y: 20
         width: 160
         height: 30
@@ -4571,8 +4571,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 130
-        y: 162
+        x: 210
+        y: 220
         width: 160
         height: 30
     - id: 2
@@ -4620,8 +4620,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 344
-        y: 165
+        x: 30
+        y: 120
         width: 160
         height: 30
     - id: 3
@@ -4665,25 +4665,19 @@ MonoBehaviour:
       - originConversationID: 9
         originDialogueID: 3
         destinationConversationID: 9
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 9
-        originDialogueID: 3
-        destinationConversationID: 9
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
       - originConversationID: 9
         originDialogueID: 3
         destinationConversationID: 9
-        destinationDialogueID: 7
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       - originConversationID: 9
         originDialogueID: 3
         destinationConversationID: 9
-        destinationDialogueID: 20
+        destinationDialogueID: 29
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4693,8 +4687,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 252
-        y: 18
+        x: 210
+        y: 70
         width: 160
         height: 30
     - id: 4
@@ -4748,8 +4742,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 130
-        y: 212
+        x: 210
+        y: 270
         width: 160
         height: 30
     - id: 5
@@ -4804,8 +4798,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 262
+        x: 210
+        y: 320
         width: 160
         height: 30
     - id: 6
@@ -4853,8 +4847,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 312
+        x: 75
+        y: 370
         width: 160
         height: 30
     - id: 7
@@ -4908,8 +4902,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
-        y: 162
+        x: 390
+        y: 220
         width: 160
         height: 30
     - id: 8
@@ -4963,8 +4957,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
-        y: 212
+        x: 390
+        y: 270
         width: 160
         height: 30
     - id: 9
@@ -5018,8 +5012,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 539
-        y: 262
+        x: 390
+        y: 320
         width: 160
         height: 30
     - id: 10
@@ -5045,7 +5039,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I used to be in the army, as a field medic. The events you read about
+        value: I used to be in the army as a field medic. The events you read about
           are of the war I fought in.
         type: 0
         typeString: 
@@ -5074,8 +5068,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 539
-        y: 312
+        x: 345
+        y: 370
         width: 160
         height: 30
     - id: 11
@@ -5129,8 +5123,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 539
-        y: 362
+        x: 210
+        y: 420
         width: 160
         height: 30
     - id: 12
@@ -5156,8 +5150,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Many years ago. It was a fairly large conflict, though I wouldn't
-          be surprised if not many knew about it.
+        value: Around 5 or so years ago. It was a fairly short conflict though, so
+          I wouldn't be surprised if not many knew about it.
         type: 0
         typeString: 
       - title: Sequence
@@ -5185,8 +5179,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
-        y: 412
+        x: 205.29413
+        y: 471.17645
         width: 160
         height: 30
     - id: 13
@@ -5212,8 +5206,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: After all, the Rivolians got beat so badly that many of them feel
-          shame when the war is mentioned.
+        value: After all, the Rivolians aren't exactly keen to reminisce on their
+          loss...
         type: 0
         typeString: 
       - title: Sequence
@@ -5241,8 +5235,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
-        y: 462
+        x: 210
+        y: 520
         width: 160
         height: 30
     - id: 14
@@ -5268,8 +5262,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: And us Omerians aren't known for their talkativeness, so tales from
-          the front line are few and far between.
+        value: Us Omerians aren't usually braggarts either.
         type: 0
         typeString: 
       - title: Sequence
@@ -5297,8 +5290,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 536.78046
-        y: 510.78052
+        x: 210
+        y: 570
         width: 160
         height: 30
     - id: 15
@@ -5352,8 +5345,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 394.0975
-        y: 576.63416
+        x: 210
+        y: 820
         width: 160
         height: 30
     - id: 16
@@ -5414,8 +5407,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 605.0732
-        y: 615.6585
+        x: 210
+        y: 870
         width: 160
         height: 30
     - id: 17
@@ -5463,8 +5456,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 424
-        y: 670
+        x: 75
+        y: 920
         width: 160
         height: 30
     - id: 18
@@ -5518,8 +5511,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 636
-        y: 673
+        x: 345
+        y: 920
         width: 160
         height: 30
     - id: 19
@@ -5567,8 +5560,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 636
-        y: 723
+        x: 210
+        y: 970
         width: 160
         height: 30
     - id: 20
@@ -5622,8 +5615,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 723.9511
-        y: 161.90242
+        x: 210
+        y: 120
         width: 160
         height: 30
     - id: 21
@@ -5649,7 +5642,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Why did you stay when your nation left?
+        value: Why did you stay behind when your nation left?
         type: 0
         typeString: 
       - title: Sequence
@@ -5677,8 +5670,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 646.53656
-        y: 562.00006
+        x: 210
+        y: 620
         width: 160
         height: 30
     - id: 22
@@ -5732,8 +5725,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 825.8048
-        y: 602.24396
+        x: 210
+        y: 670
         width: 160
         height: 30
     - id: 23
@@ -5787,8 +5780,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 825.8048
-        y: 652.24396
+        x: 210
+        y: 720
         width: 160
         height: 30
     - id: 24
@@ -5843,8 +5836,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 825.8048
-        y: 702.24396
+        x: 210
+        y: 770
         width: 160
         height: 30
     - id: 25
@@ -5898,8 +5891,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 723.9511
-        y: 211.90242
+        x: 75
+        y: 170
         width: 160
         height: 30
     - id: 26
@@ -5953,8 +5946,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 723.9511
-        y: 261.9024
+        x: 30
+        y: 220
         width: 160
         height: 30
     - id: 27
@@ -6008,8 +6001,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 723.9511
-        y: 311.9024
+        x: 30
+        y: 270
         width: 160
         height: 30
     - id: 28
@@ -6035,7 +6028,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'll let you borrow my bike, make sure to return it when you're done.
+        value: I'll let you borrow my bike, be sure to return it when you're done.
         type: 0
         typeString: 
       - title: Sequence
@@ -6057,13 +6050,129 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 723.9511
-        y: 361.9024
+        x: 30
+        y: 320
+        width: 160
+        height: 30
+    - id: 29
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I had some questions.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 29
+        destinationConversationID: 9
+        destinationDialogueID: 30
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 390
+        y: 120
+        width: 160
+        height: 30
+    - id: 30
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: What is it?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 30
+        destinationConversationID: 9
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 30
+        destinationConversationID: 9
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 345
+        y: 170
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 86.30133, y: 84.182236}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 391.76474}
+    canvasZoom: 0.85000014
   - id: 10
     fields:
     - title: Title
