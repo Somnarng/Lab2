@@ -3610,9 +3610,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay({{end}});
-
-          AnimatorTrigger(Idle);'
+        value: AnimatorTrigger(Idle);
         type: 0
         typeString: 
       - title: EventGuid
@@ -3634,8 +3632,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 233.49493
-        y: 2503.0964
+        x: 208.49493
+        y: 2497.8333
         width: 160
         height: 30
     - id: 62
@@ -4254,7 +4252,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1958.2808}
+    canvasScrollPosition: {x: 0, y: 1937.2281}
     canvasZoom: 0.7600001
   - id: 9
     fields:
@@ -6105,7 +6103,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Delay({{end}});
+
+          Continue()'
         type: 0
         typeString: 
       - title: EventGuid
@@ -6132,8 +6132,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 0, y: 98.01448}
+    canvasZoom: 0.6700003
   - id: 10
     fields:
     - title: Title

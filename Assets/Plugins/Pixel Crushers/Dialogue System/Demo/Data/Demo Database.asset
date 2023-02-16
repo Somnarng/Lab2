@@ -1109,31 +1109,31 @@ MonoBehaviour:
       - title: Title
         value: Quest Unassigned
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Actor
         value: 3
         type: 5
-        typeString: CustomFieldType_Actor
+        typeString: 
       - title: Conversant
         value: 1
         type: 5
-        typeString: CustomFieldType_Actor
+        typeString: 
       - title: Menu Text
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Dialogue Text
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Video File
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       - title: Sequence
         value: 
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 1

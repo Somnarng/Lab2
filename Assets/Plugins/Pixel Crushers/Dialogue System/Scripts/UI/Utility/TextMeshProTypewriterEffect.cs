@@ -1,5 +1,4 @@
-// Recompile at 1/18/2023 1:44:24 AM
-// Copyright (c) Pixel Crushers. All rights reserved.
+﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -116,7 +115,7 @@ namespace PixelCrushers.DialogueSystem
 
         public override void Awake()
         {
-
+            base.Awake();
             if (removeDuplicateTypewriterEffects) RemoveIfDuplicate();
         }
 
@@ -322,6 +321,7 @@ namespace PixelCrushers.DialogueSystem
                     }
                     textComponent.maxVisibleCharacters = charactersTyped;
                     HandleAutoScroll();
+                    textComponent.ForceMeshUpdate(); // Must force every time in case something is animating TMPro (e.g., scale).
                     //---Uncomment the line below to debug: 
                     //Debug.Log(textComponent.text.Substring(0, charactersTyped).Replace("<", "[").Replace(">", "]") + " (typed=" + charactersTyped + ")");
                     lastTime = DialogueTime.time;

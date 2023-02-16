@@ -1,5 +1,4 @@
-// Recompile at 1/18/2023 1:44:24 AM
-// Copyright (c) Pixel Crushers. All rights reserved.
+﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -65,6 +64,9 @@ namespace PixelCrushers.DialogueSystem
 
         [Tooltip("If non-zero, prevent input for this duration in seconds when opening menu.")]
         public float blockInputDuration = 0;
+
+        [Tooltip("Log a warning if a response button text is blank.")]
+        public bool warnOnEmptyResponseText = false;
 
         public UnityEvent onContentChanged = new UnityEvent();
 
@@ -469,12 +471,19 @@ namespace PixelCrushers.DialogueSystem
         {
             if (button != null)
             {
+                button.response = response;
                 button.gameObject.SetActive(true);
                 button.isVisible = true;
                 button.isClickable = response.enabled;
                 button.target = target;
-                if (response != null) button.SetFormattedText(response.formattedText);
-                button.response = response;
+                if (response != null)
+                {
+                    if (warnOnEmptyResponseText && DialogueDebug.logWarnings && string.IsNullOrEmpty(response.formattedText.text))
+                    {
+                        Debug.LogWarning($"Dialogue System: Response entry [{response.destinationEntry.id}] menu text is blank.", button);
+                    }
+                    button.SetFormattedText(response.formattedText);
+                }
 
                 // Auto-number:
                 if (autonumber.enabled)
