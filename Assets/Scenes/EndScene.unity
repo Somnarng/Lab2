@@ -771,7 +771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Assets used:\nMixamo-Sitting Idle+Talk\n\nDialogue System for Unity-\nhttps://www.pixelcrushers.com/dialogue-system/\n\nFootstep
+  m_text: "Assets used:\nMixamo-Sitting Idle+Talk\n\nDialogue System for Unity-\nhttps://www.pixelcrushers.com/dialogue-system/\n\nShader-\nhttps://smoke-th.itch.io/darkbringer-retro-shader\n\nFootstep
     Sounds-\nhttps://mayragandra.itch.io/free-footsteps-sound-effects\n\nModels-
     \nhttps://elbolilloduro.itch.io/objetos-low-poly-estilo-psx  https://elbolilloduro.itch.io/paquete-de-modelos-low-poly-estilo-psx-2 
     https://elbolilloduro.itch.io/paquete-de-modelos-psx-3\r\n\nShader-\nhttps://smoke-th.itch.io/darkbringer-retro-shader"
